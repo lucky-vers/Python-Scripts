@@ -1,0 +1,42 @@
+#!/usr/bin/env python3
+
+def can_win(nums):
+    # Function to check if Warrior 1 can win
+    def helper(nums, start, end, memo):
+        if start > end:
+            return 0
+        if memo[start][end] != -1:
+            return memo[start][end]
+
+        # Warrior 1's turn
+        score1 = nums[start] + min(helper(nums, start + 1, end - 1, memo),
+                                   helper(nums, start + 2, end, memo))
+
+        # Warrior 2's turn
+        score2 = nums[end] + min(helper(nums, start, end - 2, memo),
+                                 helper(nums, start + 1, end - 1, memo))
+
+        memo[start][end] = max(score1, score2)
+        return memo[start][end]
+
+    n = len(nums)
+    memo = [[-1] * n for _ in range(n)]
+
+    total_score = sum(nums)
+    warrior1_score = helper(nums, 0, n - 1, memo)
+
+    result = warrior1_score * 2 > total_score
+
+    if result:
+        return "true"
+    else:
+        return "false"
+
+
+# Read input
+n = int(input())
+nums = list(map(int, input().split()))
+
+# Output result
+print(can_win(nums))
+

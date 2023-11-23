@@ -1,0 +1,23 @@
+#!/usr/bin/env python3
+
+def calc_total(ends: int):
+    dist = {
+        "mth" : [4, 9,  18, ends],
+        "mos" : [3, 17, 18, ends],
+        "phy" : [3, 15, 18, ends],
+        "bme" : [3, 12, 18, ends],
+        "bee" : [3, 7,  18, ends],
+        "eng" : [2, 20, 20, ends],
+    }
+
+    marks: int = 0
+
+    for i in dist.keys():
+        marks += dist[i][0] * sum(dist[i][1::])
+
+    return marks
+
+for i in range(30, 51):
+    outof180 = round((calc_total(i)/(18 * 100)) * 180, 2)
+    print(f"{i}: {outof180}")
+

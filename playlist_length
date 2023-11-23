@@ -1,0 +1,32 @@
+#!/usr/bin/env python3
+
+import yt_dlp
+
+def get_playlist_length(playlist_url):
+    options = {
+        'quiet': True,
+        'extract_flat': True,
+        'force_generic_extractor': True,
+        'simulate': True,
+    }
+
+    with yt_dlp.YoutubeDL(options) as ydl:
+        playlist_info = ydl.extract_info(playlist_url, download=False)
+        total_seconds = 0
+
+        for entry in playlist_info['entries']:
+            if entry:
+                total_seconds += entry['duration']
+
+        # Convert seconds to hours, minutes, and seconds
+        hours, remainder = divmod(total_seconds, 3600)
+        minutes, seconds = divmod(remainder, 60)
+
+        playlist_length = "{:02}:{:02}:{:02}".format(int(hours), int(minutes), int(seconds))
+        return playlist_length
+
+if __name__ == "__main__":
+    playlist_url = input()
+    playlist_length = get_playlist_length(playlist_url)
+    print(f"Playlist Length: {playlist_length}")
+

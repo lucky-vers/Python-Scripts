@@ -1,0 +1,36 @@
+#!/usr/bin/env python3
+
+grades = {
+    "S": 10,
+    "A": 9,
+    "B": 8,
+    "C": 7,
+    "D": 6,
+    "E": 5,
+    "F": 0,
+}
+
+dist = {
+    "MATHS":    ["A", 4],
+    "BE":       ["A", 3],
+    "PHY":      ["A", 3],
+    "BME":      ["A", 3],
+    "MOS":      ["A", 3],
+    "ENG":      ["S", 2],
+    "WORKSHOP": ["A", 1],
+    "PHY LAB":  ["A", 1],
+    "EG":       ["A", 1],
+}
+
+def calc_gpa(distribution: dict):
+    total_credits = sum(value[1] for value in distribution.values())
+    grade_points = 0
+
+    for subject in distribution.keys():
+        grade = distribution[subject][0]
+        grade_points += grades[grade] * distribution[subject][1]
+
+    print(round(grade_points / total_credits, 1))
+
+calc_gpa(dist)
+
