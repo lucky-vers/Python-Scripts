@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# Get the length of a youtube playlist using the `yt-dlp` package. Pass the playlist URL using stdin.
 
 import yt_dlp
 

@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# Convert the endsem marks to midsem numbers (240 -> 180)
 
 def calc_total(ends: int):
     dist = {

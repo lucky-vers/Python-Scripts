@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# Calculate your GPA based on your grades and credits. 'S' here is shorthand for an 'A+'
 
 grades = {
     "S": 10,
