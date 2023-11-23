@@ -3,12 +3,12 @@
 
 def calc_total(ends: int):
     dist = {
-        "mth" : [4, 9,  18, ends],
+        "mth" : [4, 9,  19, ends],
         "mos" : [3, 17, 18, ends],
         "phy" : [3, 15, 18, ends],
-        "bme" : [3, 12, 18, ends],
+        "bme" : [3, 12, 13, ends],
         "bee" : [3, 7,  18, ends],
-        "eng" : [2, 20, 20, ends],
+        "eng" : [2, 20, 19, ends],
     }
 
     marks: int = 0
