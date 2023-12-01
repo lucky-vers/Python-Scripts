@@ -12,7 +12,7 @@ grades = {
 }
 
 dist = {
-    "MATHS":    ["B", 4],
+    "MATHS":    ["A", 4],
     "BE":       ["B", 3],
     "PHY":      ["A", 3],
     "BME":      ["B", 3],
