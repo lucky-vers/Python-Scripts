@@ -23,6 +23,18 @@ dist = {
     "EG":       ["A", 1],
 }
 
+# dist = {
+#     "MATHS":    ["S", 4],
+#     "BET":      ["S", 3],
+#     "CHM":      ["A", 3],
+#     "PSUC":     ["S", 3],
+#     "BIO":      ["A", 3],
+#     "EVS":      ["S", 2],
+#     "PSUC LAB": ["A", 1],
+#     "CHM LAB":  ["A", 1],
+#     "EG":       ["A", 1],
+# }
+
 def calc_gpa(distribution: dict):
     total_credits = sum(value[1] for value in distribution.values())
     grade_points = 0
