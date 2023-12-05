@@ -14,13 +14,13 @@ grades = {
 dist = {
     "MATHS":    ["A", 4],
     "BE":       ["B", 3],
-    "PHY":      ["A", 3],
+    "PHY":      ["B", 3],
     "BME":      ["B", 3],
     "MOS":      ["A", 3],
     "ENG":      ["S", 2],
     "WORKSHOP": ["A", 1],
     "PHY LAB":  ["A", 1],
-    "EG":       ["B", 1],
+    "EG":       ["A", 1],
 }
 
 def calc_gpa(distribution: dict):
