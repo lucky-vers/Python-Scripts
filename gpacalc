@@ -43,7 +43,7 @@ def calc_gpa(distribution: dict):
         grade = distribution[subject][0]
         grade_points += grades[grade] * distribution[subject][1]
 
-    print(round(grade_points / total_credits, 1))
+    print(round(grade_points / total_credits, 2))
 
 calc_gpa(dist)
 
