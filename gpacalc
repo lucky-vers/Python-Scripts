@@ -15,24 +15,26 @@ dist = {
     "MATHS":    ["A", 4],
     "BE":       ["B", 3],
     "PHY":      ["B", 3],
-    "BME":      ["B", 3],
+    "BME":      ["C", 3],
     "MOS":      ["A", 3],
     "ENG":      ["S", 2],
     "WORKSHOP": ["A", 1],
     "PHY LAB":  ["A", 1],
     "EG":       ["A", 1],
+    "UHV":      ["A", 1],
 }
 
 # dist = {
-#     "MATHS":    ["S", 4],
+#     "MATHS":    ["S", 6],
 #     "BET":      ["S", 3],
 #     "CHM":      ["A", 3],
 #     "PSUC":     ["S", 3],
 #     "BIO":      ["A", 3],
 #     "EVS":      ["S", 2],
-#     "PSUC LAB": ["A", 1],
+#     "PSUC LAB": ["S", 1],
 #     "CHM LAB":  ["A", 1],
 #     "EG":       ["A", 1],
+#     "HRC":      ["S", 1],
 # }
 
 def calc_gpa(distribution: dict):
