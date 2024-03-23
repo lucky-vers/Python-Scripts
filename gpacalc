@@ -11,32 +11,17 @@ grades = {
     "F": 0,
 }
 
-# HAHAHAHAHAHAHAHAHAHAHAHAHAHAH fuck my life
-# dist = {
-#     "MATHS":    ["B", 4],
-#     "BE":       ["B", 3],
-#     "PHY":      ["B", 3],
-#     "BME":      ["C", 3],
-#     "MOS":      ["B", 3],
-#     "ENG":      ["A", 2],
-#     "WORKSHOP": ["A", 1],
-#     "PHY LAB":  ["B", 1],
-#     "EG":       ["B", 1],
-#     "UHV":      ["A", 1],
-# }
-
-# dist = {
-#     "MATHS":    ["S", 6],
-#     "BET":      ["S", 3],
-#     "CHM":      ["A", 3],
-#     "PSUC":     ["S", 3],
-#     "BIO":      ["A", 3],
-#     "EVS":      ["S", 2],
-#     "PSUC LAB": ["S", 1],
-#     "CHM LAB":  ["A", 1],
-#     "EG":       ["A", 1],
-#     "HRC":      ["S", 1],
-# }
+dist = {
+    "MATHS":    ["B", 4],
+    "BET":      ["B", 3],
+    "CHM":      ["A", 3],
+    "PSUC":     ["S", 3],
+    "BIO":      ["B", 3],
+    "EVS":      ["S", 2],
+    "PSUC LAB": ["S", 1],
+    "CHM LAB":  ["B", 1],
+    "EG":       ["B", 1],
+}
 
 def calc_gpa(distribution: dict):
     total_credits = sum(value[1] for value in distribution.values())
